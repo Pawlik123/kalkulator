@@ -5,6 +5,9 @@ import java.util.Scanner;
 public class Kalkulator {
 	public static void main(String[] args)
 	{
+		String odp;
+		do
+		{
 		Scanner in=new Scanner(System.in);
 		System.out.println("Podaj liczbê a");
 		int a=in.nextInt();
@@ -13,7 +16,6 @@ public class Kalkulator {
 		System.out.println("Wybierz dzia³anie(d) dodawanie, (o) odejmowanie, (dz) dzielenie, (m) mno¿enie");
 		Scanner ww=new Scanner(System.in);
 		String ee=ww.nextLine();
-	    
 	    if (ee.equals("d")) {
 	    	System.out.println("Suma liczb to " +(a+b));
 		} else if (ee.equals("o")){
@@ -23,8 +25,15 @@ public class Kalkulator {
 	    }
 	    else if (ee.equals("m")){
 	    	System.out.println("Mno¿enie liczb to "+ (a*b));
-	    	
 	    }
+	    System.out.println("Czy chcesz wykonac program jeszcze raz (t/n)");
+	    Scanner in2=new Scanner(System.in);
+	   odp=in2.nextLine();
+	    
+
+		} while(odp.equals("t"));   
 	}
 }
+
+
 
